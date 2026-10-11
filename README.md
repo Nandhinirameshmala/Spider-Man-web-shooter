@@ -1,146 +1,167 @@
-#Spider-Man AR Experience Using Python
-Bringing Spider-Man-Inspired Augmented Reality to Life with Computer Vision
+<h1 align="center">🕷️ Spider-Man AR Experience Using Python</h1>
 
-An interactive Augmented Reality (AR) experience built with Python, OpenCV, and MediaPipe. Track your face, wear a Spider-Man mask, and trigger a dynamically generated web-shooting effect using hand gestures — all in real time through your webcam.
+<h3 align="center">Bringing Spider-Man-Inspired Augmented Reality to Life with Computer Vision</h3>
 
-Overview
+<p align="center"> <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"/> <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/> <img src="https://img.shields.io/badge/MediaPipe-Hand%20Tracking-orange?style=for-the-badge" alt="MediaPipe"/> <img src="https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/> </p>
 
-The Spider-Man AR Experience combines real-time face tracking, hand landmark detection, gesture recognition, and procedural graphics to create an immersive webcam-based AR application.
+<p align="center"> <b>An interactive Augmented Reality experience powered by Python, OpenCV, and MediaPipe.</b> </p>
 
-The application overlays a Spider-Man mask onto the user's face and recognizes a predefined hand gesture to launch a graphical web effect. Both the web animation and its impact effect are generated programmatically using OpenCV, reducing the need for pre-rendered animation assets.
+<p align="center"> Track your face, wear a Spider-Man mask, and trigger a dynamically generated web-shooting effect using hand gestures — all through your webcam. </p>
 
-This project explores how Computer Vision + Real-Time Graphics + Interactive Augmented Reality can turn a creative idea into an engaging Python application.
+<hr/>
 
-Features
-Real-Time Face Tracking — Tracks facial landmarks to position the Spider-Man mask.
-Augmented Reality Mask — Resizes, positions, and rotates the mask to follow facial movement.
-Hand Landmark Detection — Tracks hand key points using MediaPipe.
-Gesture-Based Interaction — Recognizes a predefined Spider-Man-inspired web-shooting gesture.
-Procedural Web Animation — Generates web strands, connecting threads, curves, and glow effects through code.
-Dynamic Impact Effects — Creates a graphical impact animation when the web reaches its target.
-Live Webcam Processing — Combines face tracking, hand tracking, and visual effects in a real-time video feed.
-Tech Stack
-Technology	Purpose
-Python	Core application logic
-OpenCV	Image processing and graphical effects
-MediaPipe Face Mesh	Facial landmark detection
-MediaPipe Hands	Hand tracking and gesture recognition
-NumPy	Image arrays and numerical operations
-Computer Vision	Real-time face and hand analysis
-Augmented Reality	Interactive mask and visual overlays
-How It Works
-1. Face Detection and Mask Placement
+<h2>📌 Overview</h2>
 
-MediaPipe Face Mesh detects facial landmarks. These landmarks help estimate the face's position, dimensions, and orientation so the Spider-Man mask can be aligned with the user's face.
+<p> The <b>Spider-Man AR Experience</b> is a computer vision project that combines <b>real-time face tracking, hand landmark detection, gesture recognition, and procedural graphics</b> to create an interactive webcam-based Augmented Reality application. </p>
 
-2. Hand Tracking
+<p> The application overlays a Spider-Man mask onto the user's face and recognizes a predefined hand gesture to trigger a graphical web-shooting effect. </p>
 
-MediaPipe Hands identifies important hand landmarks, including fingertips and finger joints, to track hand position and configuration.
+<p> Instead of relying entirely on pre-rendered animations, the project generates <b>web and impact effects programmatically using OpenCV</b>, creating opportunities for customization and further development. </p>
 
-3. Gesture Recognition
+<blockquote> <b>Project Goal:</b> Combine Computer Vision, Real-Time Graphics, and Augmented Reality to bring a Spider-Man-inspired experience to life. </blockquote>
 
-The application evaluates finger positions to recognize a predefined web-shooting gesture. Once the gesture is detected, the web animation is triggered.
+<hr/>
 
-4. Procedural Web Generation
+<h2>✨ Features</h2>
 
-Instead of depending on a pre-made web animation, OpenCV draws the web dynamically using lines, strands, curves, and visual effects. The web moves from the hand toward the target.
+<ul> <li><b>🎭 Real-Time Face Tracking</b> — Detects facial landmarks and estimates face position to help keep the Spider-Man mask aligned.</li> <li><b>🕷️ AR Mask Overlay</b> — Resizes, positions, and rotates the mask to follow facial movement.</li> <li><b>✋ Hand Landmark Detection</b> — Tracks hand key points and fingertips using MediaPipe.</li> <li><b>⚡ Gesture-Based Interaction</b> — Recognizes a predefined Spider-Man-inspired hand gesture to trigger the web effect.</li> <li><b>🕸️ Procedural Web Animation</b> — Generates web strands, connecting threads, curves, and visual effects through code.</li> <li><b>💥 Dynamic Impact Effects</b> — Creates a graphical impact animation when the web reaches its target.</li> <li><b>🎥 Live Webcam Processing</b> — Combines tracking, gesture recognition, and visual effects in a real-time video feed.</li> </ul>
 
-5. Impact Animation
+<hr/>
 
-When the web reaches its target, a programmatically generated impact effect adds a more dynamic visual element to the experience.
+<h2>🛠️ Tech Stack</h2>
 
-6. Real-Time Rendering
+<table> <thead> <tr> <th>Technology</th> <th>Purpose</th> </tr> </thead> <tbody> <tr> <td><b>Python</b></td> <td>Core application logic and processing</td> </tr> <tr> <td><b>OpenCV</b></td> <td>Real-time image processing and graphical effects</td> </tr> <tr> <td><b>MediaPipe Face Mesh</b></td> <td>Facial landmark detection and tracking</td> </tr> <tr> <td><b>MediaPipe Hands</b></td> <td>Hand landmark detection and gesture recognition</td> </tr> <tr> <td><b>NumPy</b></td> <td>Numerical operations and image array manipulation</td> </tr> <tr> <td><b>Computer Vision</b></td> <td>Face and hand analysis</td> </tr> <tr> <td><b>Augmented Reality</b></td> <td>Interactive mask overlays and visual effects</td> </tr> </tbody> </table>
 
-The mask, tracked landmarks, gesture detection, web animation, and impact effect are composited into the live webcam feed.
+<hr/>
 
-Project Structure
-SpiderMan_Project/
-├── main.py
-├── assets/
-│   └── spiderman_mask.png
-├── README.md
-└── requirements.txt   # Optional: dependency list
+<h2>⚙️ How It Works</h2>
 
-The mask image is required for the overlay. The web and impact effects are generated using code, so separate web animation images are not necessary.
+<h3>1. Face Detection and Mask Placement</h3>
 
-Getting Started
-Prerequisites
-Python 3.11 recommended
-A working webcam
-Windows or another operating system supported by the dependencies
-Git installed on your system
-1. Clone the Repository
-git clone https://github.com/YOUR-USERNAME/SpiderMan_Project.git
-cd SpiderMan_Project
+<p> <b>MediaPipe Face Mesh</b> identifies facial landmarks to estimate the face's position and dimensions. These landmarks help position and align the Spider-Man mask with the user's face. </p>
 
-Replace YOUR-USERNAME with your GitHub username.
+<h3>2. Hand Tracking</h3>
 
-2. Create a Virtual Environment
-python -m venv venv311
+<p> <b>MediaPipe Hands</b> detects important hand landmarks, including fingertips and finger joints, to track the user's hand position and configuration. </p>
 
-Activate it on Windows:
+<h3>3. Gesture Recognition</h3>
 
-venv311\Scripts\activate
-3. Install Dependencies
-python -m pip install opencv-python mediapipe numpy
+<p> The application evaluates finger positions to identify a predefined <b>web-shooting gesture</b>. When the gesture is recognized, the web animation is triggered. </p>
 
-If you use a requirements.txt file, you can install the dependencies with:
+<h3>4. Procedural Web Generation</h3>
 
-python -m pip install -r requirements.txt
+<p> Using <b>OpenCV</b>, the application dynamically draws web strands, connecting lines, curves, and visual effects. The web moves from the hand toward its target without requiring a pre-rendered web animation. </p>
 
-Avoid installing opencv-python and opencv-contrib-python together in the same environment unless your setup specifically requires it.
+<h3>5. Impact Animation</h3>
 
-4. Add the Mask Asset
+<p> When the web reaches its target, a <b>programmatically generated impact effect</b> adds a dynamic visual element to the experience. </p>
 
-Create an assets directory and place your Spider-Man mask image inside it:
+<h3>6. Real-Time Rendering</h3>
 
-assets/spiderman_mask.png
+<p> The mask overlay, face tracking, hand tracking, gesture recognition, and web effects are combined into a single <b>live webcam feed</b>. </p>
 
-Ensure that the image path in main.py matches the filename and directory.
+<hr/>
 
-5. Run the Application
-python main.py
+<h2>📂 Project Structure</h2>
 
-Allow webcam access if prompted. Press Q to close the application if main.py uses q as its exit key.
+<pre> SpiderMan_Project/ │ ├── main.py │ ├── assets/ │ └── spiderman_mask.png │ ├── requirements.txt │ └── README.md </pre>
 
-Learning Outcomes
+<h3>File Descriptions</h3>
 
-Building this project provided hands-on experience with:
+<ul> <li><code>main.py</code> — Main application containing the tracking, gesture recognition, and rendering logic.</li> <li><code>assets/spiderman_mask.png</code> — Spider-Man mask image used for the AR overlay.</li> <li><code>requirements.txt</code> — Python dependencies required to run the project.</li> <li><code>README.md</code> — Project documentation and setup instructions.</li> </ul>
 
-Facial landmark detection and tracking
-Hand tracking and gesture recognition
-Real-time image processing with OpenCV
-Image overlay positioning, resizing, and rotation
-Procedural graphics and animation
-Integrating multiple computer vision components
-Debugging webcam access, dependency compatibility, and asset paths
-Future Enhancements
-Improve gesture recognition accuracy
-Introduce multiple web-shooting gestures
-Add smoother animation and more realistic web movement
-Enhance impact and crack effects
-Support additional AR masks and interactive effects
-Optimize processing for better frame rates
-Add a simple interface for selecting effects and controlling the experience
-Project Purpose
+<p> <b>Note:</b> The mask image is required for the overlay. The web and impact effects are generated through code, so separate web animation images are not necessary. </p>
 
-This project is a hands-on exploration of how Python, Computer Vision, and interactive graphics can be combined to create an engaging Augmented Reality experience.
+<hr/>
 
-It represents my interest in transforming creative ideas into practical applications through experimentation, coding, and problem-solving.
+<h2>🚀 Getting Started</h2>
 
-Author
+<p>Follow these steps to set up and run the project locally.</p>
 
-Nandhini Ramesh
+<h3>Prerequisites</h3>
 
-Interested in Python, Artificial Intelligence, Computer Vision, Robotics, and interactive technology.
+<ul> <li><b>Python 3.11</b> — Recommended version</li> <li><b>Webcam</b> — Required for real-time interaction</li> <li><b>Git</b> — For cloning the repository</li> <li>A supported operating system and compatible dependencies</li> </ul>
 
-GitHub: Explore my repositories
-LinkedIn: Connect with me
+<h3>Step 1: Clone the Repository</h3>
 
-Replace the placeholder GitHub username and LinkedIn URL with your actual profile links.
+<pre><code>git clone https://github.com/YOUR-USERNAME/SpiderMan_Project.git cd SpiderMan_Project</code></pre>
 
-If you find this project interesting
+<p><b>Remember:</b> Replace <code>YOUR-USERNAME</code> with your actual GitHub username.</p>
 
-Explore the repository, experiment with the code, and share your ideas for future improvements.
+<h3>Step 2: Create a Virtual Environment</h3>
 
-Built with Python. Inspired by Spider-Man. Powered by Computer Vision.
+<pre><code>python -m venv venv311</code></pre>
+
+<p><b>Activate the environment on Windows:</b></p>
+
+<pre><code>venv311\Scripts\activate</code></pre>
+
+<h3>Step 3: Install Dependencies</h3>
+
+<pre><code>python -m pip install opencv-python mediapipe numpy</code></pre>
+
+<p><b>Alternatively, install from requirements.txt:</b></p>
+
+<pre><code>python -m pip install -r requirements.txt</code></pre>
+
+<p><b>Important:</b> Avoid installing <code>opencv-python</code> and <code>opencv-contrib-python</code> together in the same environment unless your setup specifically requires it.</p>
+
+<h3>Step 4: Add the Mask Asset</h3>
+
+<p>Place the Spider-Man mask image inside the <code>assets</code> folder.</p>
+
+<pre><code>assets/spiderman_mask.png</code></pre>
+
+<p>Ensure the image path in <code>main.py</code> matches the filename and directory.</p>
+
+<h3>Step 5: Run the Application</h3>
+
+<pre><code>python main.py</code></pre>
+
+<p>Allow webcam access if prompted. Press <kbd>Q</kbd> to exit if the application uses <code>q</code> as its quit key.</p>
+
+<hr/>
+
+<h2>🎓 Learning Outcomes</h2>
+
+<p>This project provided hands-on experience with:</p>
+
+<ul> <li><b>Facial Landmark Detection</b> — Understanding facial tracking using MediaPipe.</li> <li><b>Hand Tracking and Gesture Recognition</b> — Identifying hand positions and finger configurations.</li> <li><b>Real-Time Image Processing</b> — Processing webcam frames with OpenCV.</li> <li><b>AR Overlay Techniques</b> — Positioning, resizing, and rotating graphical assets.</li> <li><b>Procedural Graphics</b> — Generating web animations and impact effects through code.</li> <li><b>Computer Vision Integration</b> — Combining face and hand tracking in one application.</li> <li><b>Debugging and Optimization</b> — Working with camera access, dependencies, and asset paths.</li> </ul>
+
+<hr/>
+
+<h2>🔮 Future Enhancements</h2>
+
+<ul> <li><b>Advanced Gesture Recognition</b> — Support multiple web-shooting gestures.</li> <li><b>Realistic Web Physics</b> — Add smoother motion and more natural web movement.</li> <li><b>Enhanced Visual Effects</b> — Improve impact animations, glow effects, and crack effects.</li> <li><b>Multiple AR Masks</b> — Introduce additional masks and interactive effects.</li> <li><b>Performance Optimization</b> — Improve frame rates and tracking responsiveness.</li> <li><b>Interactive Controls</b> — Add an interface to select masks and control effects.</li> </ul>
+
+<hr/>
+
+<h2>🎯 Project Purpose</h2>
+
+<p> This project explores how <b>Python, Computer Vision, and interactive graphics</b> can be combined to build an engaging Augmented Reality application. </p>
+
+<p> It reflects my interest in transforming creative ideas into practical applications through <b>experimentation, programming, and problem-solving</b>. </p>
+
+<p> For me, this project is more than a Spider-Man-inspired effect — it is an opportunity to explore how technology can make digital interactions more immersive. </p>
+
+<hr/>
+
+<h2>👩‍💻 About the Author</h2>
+
+<h3>Nandhini Ramesh</h3>
+
+<p> Interested in <b>Artificial Intelligence, Python, Computer Vision, Robotics, and Interactive Technology</b>. </p>
+
+<p> <b>GitHub:</b> <a href="https://github.com/YOUR-USERNAME">Explore My Repositories</a><br/> <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/nandhini-ramesh-b93b05228/">Connect with Me</a> </p>
+
+<hr/>
+
+<h2 align="center">⭐ Show Your Support</h2>
+
+<p align="center"> If you find this project interesting, feel free to <b>explore the repository, experiment with the code, and share your suggestions</b>. </p>
+
+<p align="center"> If you enjoy this project, consider giving the repository a <b>star ⭐</b> on GitHub. </p>
+
+<hr/>
+
+<h3 align="center">Built with Python.</h3> <h3 align="center">Inspired by Spider-Man.</h3> <h3 align="center">Powered by Computer Vision.</h3>
